@@ -1,254 +1,470 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <title>Kalyan Reddy|Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalyan Reddy | Portfolio</title>
 
-  <!-- google font -->
-
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Courgette&display=swap" rel="stylesheet">
 
-  <!-- css -->
-
+  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="portfolio-styles.css">
 
-  <link rel="icon" href="favicon.ico">
-
-  <!-- fontawesome -->
+  <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/17dc3ada1e.js" crossorigin="anonymous"></script>
 
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-  <!-- jquery -->
-
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <!-- Particles.js for background effect -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 
 <body>
+  <!-- Scroll Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
 
   <section id="title">
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+    
     <div class="container-fluid">
-
-
       <!-- Nav Bar -->
-      <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href=""><span class=brand-name>K</span>alyan Reddy</a>
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand" href="#title"><span class="brand-name">K</span>alyan Reddy</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
+              <a class="nav-link smooth-scroll" href="#features">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link smooth-scroll" href="#testimonials">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link smooth-scroll" href="#pricing">More</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="mailto:kalyanreddy4119@gmail.com">Contact</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://www.linkedin.com/in/kalyan-reddy-25a5171b4">LinkedIn</a>
+              <a class="nav-link" href="https://www.linkedin.com/in/kalyan-reddy-25a5171b4" target="_blank">LinkedIn</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://docs.google.com/document/d/16Mkj4CSY7vxWsi_jFzhpl9NlhU0WAgsl/edit?usp=sharing&ouid=112048006596918407690&rtpof=true&sd=true">Resume</a>
-            </li>
-            <li class="nav-item">
-              <a href="#title"><button type="button" class="btn btn-outline-light sign-upbutton">Portfolio</button></a>
+              <a class="nav-link" href="https://docs.google.com/document/d/16Mkj4CSY7vxWsi_jFzhpl9NlhU0WAgsl/edit?usp=sharing&ouid=112048006596918407690&rtpof=true&sd=true" target="_blank">Resume</a>
             </li>
           </ul>
         </div>
       </nav>
 
-
-
       <!-- Title -->
-      <div class="title">
-      <div class="row">
-        <div class="col-lg-6 ">
-          <h1>Hello, i'm glad you are here <span class="dots">. . </span> feel free to scroll down to know me more</h1>
-          <a href="#features"><button type="button" class="btn btn-outline-light btn-lg download-button" ><i class="fab fa-apple"></i> Qualifications</button></a>
-          <a href="#testimonials"><button type="button" class="btn btn-dark btn-lg  download-button"><i class="fab fa-google-play"></i> Projects</button></a>
-        </div>
-        <div class="col-lg-6 ">
-          <img class="title-image" src="images/iphone6.png" alt="iphone-mockup">
+      <div class="title-content">
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+            <div class="typing-container">
+              <h1 class="main-heading">Hello, I'm <span class="highlight">Kalyan Reddy</span></h1>
+              <p class="typing-text">
+                <span id="typed-text"></span>
+                <span class="cursor">|</span>
+              </p>
+            </div>
+            <p class="subtitle">Lead Application Developer | Full-Stack Engineer | Cloud Solutions Architect</p>
+            <div class="title-buttons">
+              <a href="#features" class="smooth-scroll"><button type="button" class="btn btn-outline-light btn-lg download-button glow-button"><i class="fas fa-user-graduate"></i> Qualifications</button></a>
+              <a href="#testimonials" class="smooth-scroll"><button type="button" class="btn btn-light btn-lg download-button glow-button"><i class="fas fa-rocket"></i> Projects</button></a>
+            </div>
+            <div class="social-links">
+              <a href="mailto:kalyanreddy4119@gmail.com" class="social-icon" data-aos="zoom-in" data-aos-delay="100"><i class="fas fa-envelope"></i></a>
+              <a href="https://www.linkedin.com/in/kalyan-reddy-25a5171b4" target="_blank" class="social-icon" data-aos="zoom-in" data-aos-delay="200"><i class="fab fa-linkedin"></i></a>
+              <a href="https://github.com/Kalyan7569" target="_blank" class="social-icon" data-aos="zoom-in" data-aos-delay="300"><i class="fab fa-github"></i></a>
+              <a href="https://kalyan7569.github.io/dicegame/" target="_blank" class="social-icon" data-aos="zoom-in" data-aos-delay="400"><i class="fas fa-gamepad"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+            <div class="profile-image-container">
+              <div class="profile-circle">
+                <div class="avatar-placeholder">
+                  <i class="fas fa-user-tie"></i>
+                </div>
+              </div>
+              <div class="floating-tech">
+                <span class="tech-badge" style="--i:1">C#</span>
+                <span class="tech-badge" style="--i:2">.NET Core</span>
+                <span class="tech-badge" style="--i:3">React</span>
+                <span class="tech-badge" style="--i:4">Azure</span>
+                <span class="tech-badge" style="--i:5">SharePoint</span>
+                <span class="tech-badge" style="--i:6">SQL Server</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    </div>
   </section>
-
-
 
   <!-- Features -->
   <section id="features">
-    <div class="row">
-
-
-      <div class="feature-box col-lg-4">
-        <i class="fas fa-check-circle fa-4x"></i>
-        <h3>Academics</h3>
-        <p>Graduated with a Master's Degree in Computer Science, specialized in Software Development</p>
+    <div class="section-header" data-aos="fade-up">
+      <h2 class="section-title">About Me</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="row features-row">
+      <div class="feature-box col-lg-4" data-aos="flip-left" data-aos-delay="100">
+        <div class="feature-card">
+          <div class="icon-wrapper">
+            <i class="fas fa-graduation-cap fa-4x"></i>
+          </div>
+          <h3>Education</h3>
+          <p>Master of Science in Computer Science from California State University Long Beach</p>
+          <div class="feature-stats">
+            <span class="stat-badge">MS in CS - GPA 3.7/4.0</span>
+          </div>
+        </div>
       </div>
 
-      <div class="feature-box col-lg-4">
-        <i class="fas fa-bullseye fa-4x"></i>
-        <h3>Work Experience</h3>
-        <p>Application Developer II, Web developer, Software Developer</p>
+      <div class="feature-box col-lg-4" data-aos="flip-left" data-aos-delay="200">
+        <div class="feature-card">
+          <div class="icon-wrapper">
+            <i class="fas fa-briefcase fa-4x"></i>
+          </div>
+          <h3>Work Experience</h3>
+          <p>Lead Application Developer at BVM Technology | Application Developer II at NM Public Education Dept | Web Developer at CSULB</p>
+          <div class="feature-stats">
+            <span class="stat-badge">5+ Years</span>
+          </div>
+        </div>
       </div>
 
-      <div class="feature-box col-lg-4">
-        <i class="fas fa-heart fa-4x"></i>
-        <h3>Interests</h3>
-        <p>I am a Neural Networks enthusiast (especially Image processing techniques) with a strong interest in Web and Software Developement</p>
+      <div class="feature-box col-lg-4" data-aos="flip-left" data-aos-delay="300">
+        <div class="feature-card">
+          <div class="icon-wrapper">
+            <i class="fas fa-brain fa-4x"></i>
+          </div>
+          <h3>Specialization</h3>
+          <p>Software Development | Cloud Solutions (AWS, Azure, GCP) | Full-Stack Web Development with expertise in .NET, React, and modern frameworks</p>
+          <div class="feature-stats">
+            <span class="stat-badge">Cloud & Web</span>
+          </div>
+        </div>
       </div>
     </div>
 
+    <!-- Skills Section -->
+    <div class="skills-section" data-aos="fade-up">
+      <h3 class="skills-title">Technical Skills</h3>
+      <div class="skills-container">
+        <div class="skill-item">
+          <div class="skill-info">
+            <span>C# / .NET Core / ASP.NET</span>
+            <span>90%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" style="--width: 90%"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info">
+            <span>React / Node.js / TypeScript</span>
+            <span>88%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" style="--width: 88%"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info">
+            <span>AWS / Azure / GCP</span>
+            <span>85%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" style="--width: 85%"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info">
+            <span>SQL / MongoDB / SharePoint / SPFx</span>
+            <span>87%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" style="--width: 87%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-
-  <!-- Testimonials -->
-
+  <!-- Testimonials / Projects -->
   <section id="testimonials">
+    <div class="section-header" data-aos="fade-up">
+      <h2 class="section-title text-white">Featured Projects</h2>
+      <div class="section-divider"></div>
+    </div>
+    
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <h2 class="test-h2">Reverse Image Search Engine, Developer</h2>
-         
-          <em>Developed an AI-based Reverse Image Search Engine using various Deep Learning and Neural Network technologies like CNN, ResNet50, TensorFlow, Flask, Pandas, etc. Used ImageNet dataset to train the model</em>
+          <div class="project-card" data-aos="zoom-in">
+            <div class="project-icon">
+              <i class="fas fa-database fa-3x"></i>
+            </div>
+            <h2 class="test-h2">SAGE - REA Web Application</h2>
+            <span class="project-role">Lead Application Developer</span>
+            <p class="project-description">Designed, developed and tested an enterprise web application that manages millions of records with SFTP server integration. Built large-scale database with stored procedures and implemented data masking/exporting systems for multiple vendors.</p>
+            <div class="project-tags">
+              <span class="tag">C#</span>
+              <span class="tag">.NET Core</span>
+              <span class="tag">MSSQL</span>
+              <span class="tag">SFTP</span>
+              <span class="tag">Data Masking</span>
+            </div>
+          </div>
         </div>
+        
         <div class="carousel-item">
-          <h2 class="test-h2">Accident Detection and Rescue System, Team Lead</h2>
-          
-          <em>Built an IOT- Based system that is capable of alerting concerned parties on the account of an accident with its exact geographical location.</em> 
-          <em>Modules used : GSM,GPS, MEMS sensor, Arduino Uno</em>
+          <div class="project-card" data-aos="zoom-in">
+            <div class="project-icon">
+              <i class="fab fa-microsoft fa-3x"></i>
+            </div>
+            <h2 class="test-h2">SharePoint Migration & Development</h2>
+            <span class="project-role">Application Developer II</span>
+            <p class="project-description">Led migration of on-premises SharePoint sites to SharePoint Online. Built destination environment using SPFx and React/Node.js, performed production testing for webpart compatibility. Maintained NMPED public website using WordPress and PHP.</p>
+            <div class="project-tags">
+              <span class="tag">SharePoint</span>
+              <span class="tag">SPFx</span>
+              <span class="tag">React</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">WordPress</span>
+            </div>
+          </div>
         </div>
+        
         <div class="carousel-item">
-          <h2 class="test-h2">Drowsiness Detection and Alert System, Personal Project</h2>
-          
-          <em>Developed a system that can detect and alert a drowsy driver in real-time by applying classifier like Facial Landmark Detection and EyeBlink Classifier after being trained on related datasets.</em>
-
+          <div class="project-card" data-aos="zoom-in">
+            <div class="project-icon">
+              <i class="fas fa-tools fa-3x"></i>
+            </div>
+            <h2 class="test-h2">CSULB Beach Building Services</h2>
+            <span class="project-role">Web Developer</span>
+            <p class="project-description">Developed web applications for University's Trades department with Elastic Search and advanced filter features using C# and ASP.NET Core in Microservices Architecture. Created REST APIs for CRUD operations with multiple route handling.</p>
+            <div class="project-tags">
+              <span class="tag">ASP.NET Core</span>
+              <span class="tag">Microservices</span>
+              <span class="tag">Elastic Search</span>
+              <span class="tag">REST API</span>
+              <span class="tag">Git</span>
+            </div>
+          </div>
         </div>
+        
         <div class="carousel-item">
-          <h2 class="test-h2">Object Avoidance Robot, Team Lead</h2>
-          
-          <em> Built a mobile robot that can detect the obstacles in front of it and avoid collisions by automatically changing its direction. With this intelligence, the robot can navigate in an unknown environment by avoiding collisions without human supervision. It uses an Ultrasonic sensor and camera connected with an Arduino system to control the entire operation</em>
-
+          <div class="project-card" data-aos="zoom-in">
+            <div class="project-icon">
+              <i class="fab fa-google fa-3x"></i>
+            </div>
+            <h2 class="test-h2">Grocery Price Comparison - GCP</h2>
+            <span class="project-role">Cloud Project</span>
+            <p class="project-description">Built a web application allowing users to compare grocery prices across nearby stores. Deployed using Google PaaS services: App Engine, Cloud SQL, Cloud Storage, and Google Maps APIs. Used Django REST framework and React JS.</p>
+            <div class="project-tags">
+              <span class="tag">Google Cloud</span>
+              <span class="tag">Django</span>
+              <span class="tag">React</span>
+              <span class="tag">Cloud SQL</span>
+              <span class="tag">Maps API</span>
+            </div>
+          </div>
         </div>
-
       </div>
+      
       <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon"></span>
-        <span class="sr-only">Previous</span>
       </a>
       <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
         <span class="carousel-control-next-icon"></span>
-        <span class="sr-only">Next</span>
       </a>
+      
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleControls" data-slide-to="1"></li>
+        <li data-target="#carouselExampleControls" data-slide-to="2"></li>
+        <li data-target="#carouselExampleControls" data-slide-to="3"></li>
+      </ol>
     </div>
-
-
-
-
   </section>
-
 
   <!-- Press -->
-
   <section id="press">
-
-   
-    <img class="press-image" src="images/tnw.png" alt="tnw-logo">
-    <img class="press-image" src="images/mashable.png" alt="mashable-logo">
-
+    <div class="press-container" data-aos="fade-up">
+      <p class="press-text">Technologies I work with daily</p>
+      <div class="tech-icons">
+        <i class="fab fa-microsoft fa-3x" title=".NET"></i>
+        <i class="fab fa-js-square fa-3x" title="JavaScript"></i>
+        <i class="fab fa-react fa-3x" title="React"></i>
+        <i class="fab fa-node fa-3x" title="Node.js"></i>
+        <i class="fab fa-aws fa-3x" title="AWS"></i>
+        <i class="fab fa-python fa-3x" title="Python"></i>
+      </div>
+    </div>
   </section>
 
-
+  <!-- Pricing -->
   <section id="pricing">
-    <h2 class="test-h2">More of me </h2>
-    <p>I believe that costant learning is what keeps your passion alive. I have chosen CS major for the same reason. </p>
+    <div class="section-header" data-aos="fade-up">
+      <h2 class="section-title">More About Me</h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">I believe that constant learning is what keeps your passion alive. I have chosen CS major for the same reason.</p>
+    </div>
+    
     <div class="row">
-
-      <div class="price-col col-lg-4 col-md-6">
-        <div class="card">
+      <div class="price-col col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="card modern-card">
           <div class="card-header">
+            <i class="fas fa-star fa-2x"></i>
             <h3>Attributes</h3>
           </div>
           <div class="card-body">
-            <ul>
-            <li>Self-motivated</li>
-            <li>Always Determined</li>
-            <li>Willing to learn</li>
-            <li>Confident in my skills</li>
-            <li>A great team Player</li>
+            <ul class="custom-list">
+              <li><i class="fas fa-check-circle"></i> Self-motivated</li>
+              <li><i class="fas fa-check-circle"></i> Always Determined</li>
+              <li><i class="fas fa-check-circle"></i> Willing to learn</li>
+              <li><i class="fas fa-check-circle"></i> Confident in my skills</li>
+              <li><i class="fas fa-check-circle"></i> A great team Player</li>
             </ul>
           </div>
         </div>
       </div>
 
-      <div class="price-col col-lg-4 col-md-6">
-        <div class="card">
+      <div class="price-col col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="card modern-card featured-card">
+          <div class="featured-badge">Featured</div>
           <div class="card-header">
+            <i class="fas fa-certificate fa-2x"></i>
             <h3>Certifications</h3>
           </div>
           <div class="card-body">
-            <ul>
-            <li>Solutions Architect Associate(AWS)</li>
-            <li>Full-Stack Web Development(Udemy)</li>
-            <li>SDE Simulation Forage </li>
-            <li>Digital Unlocked(Google)</li>  
+            <ul class="custom-list">
+              <li><i class="fab fa-aws"></i> AWS Certified Solutions Architect - Associate</li>
+              <li><i class="fab fa-google"></i> Google Digital Marketing Fundamentals</li>
+              <li><i class="fas fa-code"></i> Udemy Full Stack Web Development</li>
             </ul>
           </div>
         </div>
       </div>
 
-      <div class="price-col col-lg-4">
-        <div class="card">
+      <div class="price-col col-lg-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="card modern-card">
           <div class="card-header">
+            <i class="fas fa-trophy fa-2x"></i>
             <h3>Achievements</h3>
           </div>
           <div class="card-body">
-            <ul>
-           
-            <li>I built a small dice game</li>
-            </ul>
-           <a href="https://kalyan7569.github.io/dicegame/"><button class="btn btn-lg btn-block btn-dark" type="button">Give it a try!</button></a>
-            
+            <p class="achievement-text">Check out my interactive dice game!</p>
+            <div class="game-preview">
+              <i class="fas fa-dice fa-3x"></i>
+            </div>
+            <a href="https://kalyan7569.github.io/dicegame/" target="_blank">
+              <button class="btn btn-lg btn-block btn-game" type="button">
+                <i class="fas fa-gamepad"></i> Play Now!
+              </button>
+            </a>
           </div>
         </div>
       </div>
-
     </div>
 
-
-
-
-
-
-
-
+    <!-- Stats Counter -->
+    <div class="stats-section" data-aos="fade-up">
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <div class="stat-box">
+            <i class="fas fa-project-diagram fa-2x"></i>
+            <h3 class="stat-number" data-target="15">0</h3>
+            <p>Projects</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="stat-box">
+            <i class="fas fa-award fa-2x"></i>
+            <h3 class="stat-number" data-target="3">0</h3>
+            <p>Certifications</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="stat-box">
+            <i class="fas fa-code fa-2x"></i>
+            <h3 class="stat-number" data-target="20">0</h3>
+            <p>Technologies</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="stat-box">
+            <i class="fas fa-clock fa-2x"></i>
+            <h3 class="stat-number" data-target="5">0</h3>
+            <p>Years Experience</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
-
 
   <!-- Call to Action -->
-
   <section id="cta">
-
-    <p class="cta-text">I hope I was interesting. Feel free to contact me on my mail given below, also you can go through my LinkedIn or Resume. Thanks, Stay Hydrated! </p>
-    <a href="https://docs.google.com/document/d/16Mkj4CSY7vxWsi_jFzhpl9NlhU0WAgsl/edit?usp=sharing&ouid=112048006596918407690&rtpof=true&sd=true"><button type="button" class="btn btn-outline-light btn-lg download-button"><i ></i> Resume</button></a>
-    <a href="https://www.linkedin.com/in/kalyan-reddy-25a5171b4"><button type="button" class="btn btn-dark btn-lg  download-button"><i ></i> LinkedIn</button></a>
+    <div class="cta-content" data-aos="zoom-in">
+      <h2 class="cta-title">Let's Work Together!</h2>
+      <p class="cta-text">I hope I was interesting. Feel free to contact me - I'm always open to discussing new projects, creative ideas, or opportunities.</p>
+      <div class="cta-buttons">
+        <a href="https://docs.google.com/document/d/16Mkj4CSY7vxWsi_jFzhpl9NlhU0WAgsl/edit?usp=sharing&ouid=112048006596918407690&rtpof=true&sd=true" target="_blank">
+          <button type="button" class="btn btn-outline-light btn-lg download-button pulse-button">
+            <i class="fas fa-file-download"></i> Download Resume
+          </button>
+        </a>
+        <a href="https://www.linkedin.com/in/kalyan-reddy-25a5171b4" target="_blank">
+          <button type="button" class="btn btn-light btn-lg download-button pulse-button">
+            <i class="fab fa-linkedin"></i> Connect on LinkedIn
+          </button>
+        </a>
+      </div>
+    </div>
   </section>
 
-
   <!-- Footer -->
-
   <footer id="footer">
-    <a href="mailto:kalyanreddy4119@gmail.com"><i  class="icon1 cta-icons fas fa-envelope"></i></a>
-    <a href=""><i class="cta-icons fab fa-instagram"></i></a>
-    
-    <p class="cta-para">© Copyright Kalyan RD | +15624753606 | kalyanreddy4119@gmail.com</p>
-
+    <div class="footer-content">
+      <div class="footer-social">
+        <a href="mailto:kalyanreddy4119@gmail.com" class="footer-icon"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/kalyan-reddy-25a5171b4" target="_blank" class="footer-icon"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Kalyan7569" target="_blank" class="footer-icon"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/" target="_blank" class="footer-icon"><i class="fab fa-instagram"></i></a>
+      </div>
+      <p class="footer-text">© 2026 Kalyan RD | +1 (562) 475-3606 | kalyanreddy4119@gmail.com</p>
+      <p class="footer-tagline">Crafted with <i class="fas fa-heart"></i> and lots of <i class="fas fa-coffee"></i></p>
+    </div>
   </footer>
 
+  <!-- jQuery and Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
+  <!-- AOS Animation -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Custom JavaScript -->
+  <script src="portfolio-scripts.js"></script>
 </body>
 
 </html>
